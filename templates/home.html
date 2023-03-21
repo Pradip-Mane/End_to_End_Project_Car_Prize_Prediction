@@ -1,0 +1,293 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Car Prize Indicator</h1>
+
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Car Prize Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">symboling</label>
+            <select class="form-control" name="symboling" placeholder="symboling" required>
+                <option class="placeholder" selected disabled value="">symboling</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3">
+                    3
+                </option>
+                <option value="-1">
+                    -1
+                </option>
+                <option value="-2">
+                    -2
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">fueltype</label>
+            <select class="form-control" name="fueltype" placeholder="fueltype" required>
+                <option class="placeholder" selected disabled value="">Select Ethnicity</option>
+                <option value="gas">
+                    gas
+                </option>
+                <option value="diesel">
+                    diesel
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">aspiration</label>
+            <select class="form-control" name="aspiration" placeholder="aspiration" required>
+                <option class="placeholder" selected disabled value="">Select aspiration</option>
+                <option value="std">
+                    std
+                </option>
+                <option value="turbo">
+                    turbo
+                </option>
+            </select>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">doornumber</label>
+            <select class="form-control" name="doornumber" placeholder="doornumber" required>
+                <option class="placeholder" selected disabled value="">Select doornumber</option>
+                <option value="four">
+                    four
+                </option>
+                <option value="two">
+                    two
+                </option>
+                
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">carbody</label>
+            <select class="form-control" name="carbody" placeholder="carbody" required>
+                <option class="placeholder" selected disabled value="">Select carbody</option>
+                <option value="wagon">
+                    wagon
+                </option>
+                <option value="sedan">
+                    sedan
+                </option>
+                <option value="hatchback">
+                    hatchback
+                </option>
+                <option value="hardtop">
+                    hardtop
+                </option>
+                <option value="grouconvertible">
+                    convertible
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">drivewheel</label>
+            <select class="form-control" name="drivewheel" placeholder="drivewheel" required>
+                <option class="placeholder" selected disabled value="">Select drivewheel</option>
+                <option value="fwd">
+                    fwd
+                </option>
+                <option value="rwd">
+                    rwd
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">enginelocation</label>
+            <select class="form-control" name="enginelocation" placeholder="enginelocation" required>
+                <option class="placeholder" selected disabled value="">Select enginelocation</option>
+                <option value="front">
+                    front
+                </option>
+                <option value="rear">
+                    rear
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">wheelbase</label>
+            <input class="form-control" type="number" name="wheelbase"
+                placeholder="Enter wheelbase" min='50' max='150' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">carlength</label>
+            <input class="form-control" type="number" name="carlength"
+                placeholder="Enter carlength" min='100' max='300' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">carwidth</label>
+            <input class="form-control" type="number" name="carwidth"
+                placeholder="Enter carwidth" min='40' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">carheight</label>
+            <input class="form-control" type="number" name="carheight"
+                placeholder="Enter carheight" min='40' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">curbweight</label>
+            <input class="form-control" type="number" name="curbweight"
+                placeholder="Enter curbweight" min='100' max='5000' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">enginesize</label>
+            <input class="form-control" type="number" name="enginesize"
+                placeholder="Enter enginesize" min='50' max='400' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">boreratio</label>
+            <input class="form-control" type="number" name="boreratio"
+                placeholder="Enter boreratio" min='1' max='5' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">stroke</label>
+            <input class="form-control" type="number" name="stroke"
+                placeholder="Enter stroke" min='1' max='5' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">compressionratio</label>
+            <input class="form-control" type="number" name="compressionratio"
+                placeholder="Enter compressionratio" min='5' max='25' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">horsepower</label>
+            <input class="form-control" type="number" name="horsepower"
+                placeholder="Enter horsepower" min='40' max='300' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">peakrpm</label>
+            <input class="form-control" type="number" name="peakrpm"
+                placeholder="Enter peakrpm" min='3000' max='7000' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">citympg</label>
+            <input class="form-control" type="number" name="citympg"
+                placeholder="Enter citympg" min='10' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">highwaympg</label>
+            <input class="form-control" type="number" name="highwaympg"
+                placeholder="Enter highwaympg" min='10' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">enginetype</label>
+            <select class="form-control" name="enginetype" placeholder="Enter enginetype" required>
+                <option class="placeholder" selected disabled value="">Select enginetype</option>
+                <option value="ohc">
+                    ohc
+                </option>
+                <option value="ohcf">
+                    ohcf
+                </option>
+                <option value="ohcv">
+                    ohcv
+                </option>
+                <option value="l">
+                    l
+                </option>
+                <option value="dohc">
+                    dohc
+                </option>
+                <option value="dohcv">
+                    dohcv
+                </option>
+                <option value="rotor">
+                    rotor
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">cylindernumber</label>
+            <select class="form-control" name="cylindernumber" placeholder="Enter cylindernumber" required>
+                <option class="placeholder" selected disabled value="">Select cylindernumber</option>
+                <option value="two">
+                    two
+                </option>
+                <option value="three">
+                    three
+                </option>
+                <option value="four">
+                    four
+                </option>
+                <option value="five">
+                    five
+                </option>
+                <option value="six">
+                    six
+                </option>
+                <option value="eight">
+                    eight
+                </option>
+                <option value="twelve">
+                    twelve
+                </option>
+            </select>
+        </div>
+        
+
+        <div class="mb-3">
+            <label class="form-label">fuelsystem</label>
+            <select class="form-control" name="fuelsystem" placeholder="Enter fuelsystem" required>
+                <option class="placeholder" selected disabled value="">Select fuelsystem</option>
+                <option value="1bbl">
+                    1bbl
+                </option>
+                <option value="2bbl">
+                    2bbl
+                </option>
+                <option value="4bbl">
+                    4bbl
+                </option>
+                <option value="spdi">
+                    spdi
+                </option>
+                <option value="mfi">
+                    mfi
+                </option>
+                <option value="idi">
+                    idi
+                </option>
+                <option value="mpfi">
+                    mpfi
+                </option>
+                <option value="spfi">
+                    spfi
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Car Prize" required />
+        </div>
+    </form>
+    <h2>
+       The  Car Prize is {{results}}
+    </h2>
+   <body>
+</html>
